@@ -1,5 +1,5 @@
 
-const BASE_URL = 'https://dacs-backend-ue08.onrender.com'; //frontend => render
+const BASE_URL = 'https://dacs-backend-ue08.onrender.com/api'; //frontend => render
 
 async function request<T>(path: string, options?: RequestInit): Promise<T> {
   const response = await fetch(`${BASE_URL}${path}`, {
