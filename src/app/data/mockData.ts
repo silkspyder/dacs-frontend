@@ -69,7 +69,18 @@ export const DataStore = {
 
   //STUDENTS
   async getStudents(): Promise<StudentDetail[]> {
-    return api.get<StudentDetail[]>('/students');
+    const [students, users] = await Promise.all([
+      api.get<StudentDetail[]>('/students'),
+      api.get<User[]>('/users'),
+    ]);
+    return students.map((s) => {
+      const linkedUser = users.find((u) => u.id === s.userId);
+      return {
+        ...s,
+        username: linkedUser?.username,
+        email: linkedUser?.email,
+      };
+    });
   },
   async getStudentByUserId(userId: number): Promise<StudentDetail | null> {
     try {
