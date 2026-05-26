@@ -3,7 +3,7 @@ import { ThemeProvider } from './context/ThemeContext';
 import { Login } from './components/Login';
 import { Dashboard } from './components/Dashboard';
 
-import ServerLoader from '../components/ServerLoader';
+import ServerLoader from './components/ServerLoader';
 
 function AppContent() {
     const { user } = useAuth();
