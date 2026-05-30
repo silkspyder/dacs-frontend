@@ -98,7 +98,7 @@ export function Dashboard() {
             <div className="flex items-center gap-3">
               <div className="bg-indigo-600 p-2 rounded-lg"><BookOpen className="w-6 h-6 text-white" /></div>
               <div>
-                <h2 className="font-semibold text-gray-800 dark:text-white">Library MS</h2>
+                <h2 className="font-semibold text-gray-800 dark:text-white"> Digital Access Catalog System (DACS) </h2>
                 <p className="text-xs text-gray-500 dark:text-gray-400">{user?.usertype}</p>
               </div>
             </div>
